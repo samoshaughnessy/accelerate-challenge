@@ -55,8 +55,8 @@ Custom styles
 */
 
 body {
-	background: #293f50;
-	color: #888;
+	background: #3ac2a4;
+	color: rgb(14, 66, 23);
 	font: 300 16px/22px "Merriweather", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -81,7 +81,7 @@ Grid
 	width: 960px;
 }
 .container {
-	padding-left: 30px;
+	padding-left: 30px;  
 	padding-right: 30px;
 }
 .grid,
@@ -100,6 +100,34 @@ Grid
 }
 .col-2-3 {
 	width: 25.00%;
+}
+
+.container,
+.grid1 {
+	margin: 0 auto;
+	width: 960px;
+}
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+}
+.grid1,
+.col-1-3,
+.col-2-3 {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.col-1-3,
+.col-2-3 {
+	display: inline-block;
+	vertical-align: top;
+} 
+.col-1-3 {
+	width: 33.33%;
+}
+.col-2-3 {
+	width: 66.66%;
 }
 
 /*
@@ -122,7 +150,6 @@ Clearfix
 
 .clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
 
-
 /*
 =========================================
 Rows
@@ -136,47 +163,14 @@ Rows
 .row {
 	background: #fff;
 	min-width: 960px;
-    padding: 66px 0 44px 0;
-    
-/*
-==========================================
-Primary header
-==========================================
-*/
-.logo  {
-	border-top: 4px solid #648880;
-	float: left;
-	font-size: 42px;
-	font-weight: 100;
-	letter-spacing: .5px;
-	line-height: 44px;
-	padding: 40px 0 22px 0;
-	text-transform: uppercase;	
+	padding: 66px 0 44px 0;
 }
-
-.tagline {
-	margin: 66px 0 22px 0;
-	text-align: right;
+.row-alt1 {
+	min-width: 960px;
+	background: #4d03a1;
+	padding-bottom: 25px;
 }
-
-/*
-=========================================
-Primary footer
-=========================================
-*/
-
-.primary-footer {
-	color: #648880;
-	font-size: 14px;
-	padding-bottom: 44px;
-	padding-top: 44px;
-}
-
-.primary-footer small {
-	float: left;
-	font-weight: 400;
-} 
-
+     
 /*	
 ======================================================
 Typography
@@ -200,7 +194,7 @@ h2 {
 	line-height: 44px;
 }
 h3 {
-	color: #a9b2b9;
+	color: #147243;
 	font-size: 21px;
 	font-weight: 400;
 	text-transform: uppercase;
@@ -217,22 +211,48 @@ strong {
 cite, em {
 	font-style: italic;
 }
- 
-/*
+
+ /*
 ==========================================
-Leads
+Primary header
 ==========================================
 */
-
-.lead {
-	text-align: center;
+.logo h1,
+.logo {
+	border-top: 6px solid #fa0000;
+	border-left: 6px solid #fa0000;
+	float: left;
+	font-size: 42px;
+	font-weight: 100;
+	letter-spacing: .5px;
+	line-height: 44px;
+	padding: 40px 0 22px 0;
+	text-transform: uppercase;
+	color: #fa0000
 }
-.lead p {
-	font-size: 21px;
-	line-height: 33px;
+
+.tagline {
+	color: #fa0000;
+	margin: 66px;
+	text-align: right;
 }
 
+/*
+=========================================
+Primary footer
+=========================================
+*/
+.primary-footer {
+	color: #fa0000;
+	font-size: 14px;
+	padding-bottom: 44px;
+	padding-top: 44px;
+}
 
+.primary-footer small {
+	float: left;
+	font-weight: 400;
+} 
 /*
 ======================================================
 Buttons
@@ -258,25 +278,20 @@ Buttons
       color: #648880;
   }
 
+
 /*
 =======================================================
 Home
 =======================================================
 */
 
-
-.hero {
-	color: #fff;
-	line-height: 44px;
-	padding: 22px 80 px 66px 80px;
-	text-align: center;
-}
-.hero h2 {
-	font-size: 36px;
-}
-.hero p {
-	font-size: 24px;
-	font-weight: 100;
+.about-me img{
+	border-radius: 50%;
+	height: 175px;
+	width: 175px;
+	padding-bottom: 22px;
+	display: block;
+	padding: 10px 20px 10px 20px;
 }
 
 .teaser img {
@@ -287,6 +302,28 @@ Home
 	max-width: 100%
 }
 
+.hero {
+	line-height: 44px;
+	padding: 22px 80px 66px 80px;
+	text-align: center;
+}
+.hero h2 {
+	color: #474948;
+	font-size: 46px;
+}
+.hero p {
+	 font-size: 24px;
+	 font-weight: 100;
+}
+.about-me h3 {
+	 color: #0b6913;
+	 font-weight: 100;
+}
+
+.about-me p {
+	color: #0b6913;
+}
+
 /*
 ========================================================
 Gallery
@@ -294,42 +331,11 @@ Gallery
 */
 
 .gallery img {
-    height: 350px;
-}
+	height: 200px;
+	width: 200px;
+	display: inline-block; 
+	margin-bottom: 22px;
+	max-width: 100%; 
+	padding: 10px 20px 10px 20px;
 
-/*
-======================================================================================
-Photo Album
-======================================================================================
-*/
-
-.table img {
-    width: 100px;
-    height: 90px;
-}
-
-th 
-{
-    font-size: 2em;
-    background-color:#f9ddff;
-    padding: 20px;
-}
-
-body
-{
-    font-family: sans-serif;
-    font-size: 1em;
-    text-align: center;
-    background-color: slateblue;
-}
-
-table
-{
-    background-color: #f9ddff;
-    width: 60%;
-}
-
-td
-{
-    padding: 25px;
 }
